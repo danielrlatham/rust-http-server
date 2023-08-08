@@ -16,3 +16,27 @@ impl Server {
         println!("Listening on {}", self.addr);
     }
 }
+
+/*
+* GET /user?id=10 HTTP/1.1\n
+* HEADERS \n
+* BODY
+*/
+
+struct Request {
+    path: String,
+    query_string: String,
+    method: String,
+}
+
+enum Method {
+    GET,
+    DELETE,
+    POST,
+    PUT,
+    HEAD,
+    CONNECT,
+    OPTIONS,
+    TRACE,
+    PATCH,
+}
